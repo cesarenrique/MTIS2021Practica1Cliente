@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+      
+    <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2021.06.06 a las 08:08:53 PM CEST 
+
+  -->
+      
+    <bindings xmlns:tns="http://www.mtis.org/ControlPresencia/" if-exists="true" scd="x-schema::tns">
+            
+        <schemaBindings map="false">
+                  
+            <package name="org.mtis.www.controlPresencia"/>
+                
+        </schemaBindings>
+            
+        <bindings if-exists="true" scd="tns:Registrar">
+                  
+            <class ref="org.mtis.www.controlPresencia.Registrar"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="tns:RegistrarResponse">
+                  
+            <class ref="org.mtis.www.controlPresencia.RegistrarResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="tns:Eliminar">
+                  
+            <class ref="org.mtis.www.controlPresencia.Eliminar"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="tns:EliminarResponse">
+                  
+            <class ref="org.mtis.www.controlPresencia.EliminarResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="tns:ControlEmpleadosSala">
+                  
+            <class ref="org.mtis.www.controlPresencia.ControlEmpleadosSala"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="tns:ControlEmpleadosSalaResponse">
+                  
+            <class ref="org.mtis.www.controlPresencia.ControlEmpleadosSalaResponse"/>
+                
+        </bindings>
+          
+    </bindings>
+    
+</bindings>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments::head (titulo='Validar NIF')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4">
+				<form method="post" th:action="@{/empleados/borrar}" th:object="${validarData}">
+					<div class="form-group">
+						<label for="dato">NIF empleado a Borrar</label>
+						<input class="form-control" id="dato" name="dato" required th:field="*{dato}" type="text"/>
+					</div>
+				
+					<button class="btn btn-primary" type="submit">Borrar Empleado</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+
+</body>
+</html>

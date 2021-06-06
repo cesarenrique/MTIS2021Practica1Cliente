@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments::head (titulo='Consultar Empleado')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4">
+				<form method="post" th:action="@{/empleados/consultar}" th:object="${validarData}">
+					<div class="form-group">
+						<label for="dato">NIF del Empleado Consultar</label>
+						<input class="form-control" id="dato" name="dato" required th:field="*{dato}" type="text"/>
+					</div>
+				
+					<button class="btn btn-primary" type="submit">Consultar Empleado</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+
+</body>
+</html>

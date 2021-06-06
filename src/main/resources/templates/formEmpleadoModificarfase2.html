@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments::head (titulo='Modificar Empleado')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+	<div class="container-fluid">
+		<h1>Mofificar Empleado</h1>
+		<div class="row">
+			<div class="col-4">
+				<form method="post" th:action="@{/empleados/modificar2}" th:object="${empleadoData}">
+					<div class="form-group">
+						<label for="NIF">NIF:</label>
+						<input class="form-control" id="NIF" name="NIF" th:value="${empleadoData.NIF}" required  readonly th:field="*{NIF}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="nombre">Nombre:</label>
+						<input class="form-control" id="nombre" name="nombre" th:value="${empleadoData.nombre}" required th:field="*{nombre}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="apellidos">Apellidos:</label>
+						<input class="form-control" id="apellidos" name="apellidos" th:value="${empleadoData.apellidos}"required th:field="*{apellidos}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="apellido">direccion:</label>
+						<input class="form-control" id="direccion" name="direccion" th:value="${empleadoData.direccion}" required th:field="*{direccion}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="poblacion">poblacion:</label>
+						<input class="form-control" id="poblacion" name="poblacion" th:value="${empleadoData.poblacion}" required th:field="*{poblacion}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="telefono">telefono:</label>
+						<input class="form-control" id="telefono" name="telefono" th:value="${empleadoData.telefono}" required th:field="*{telefono}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="email">email:</label>
+						<input class="form-control" id="email" name="email" th:value="${empleadoData.email}" required th:field="*{email}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="fechaNacimiento">fechaNacimiento (dd-MM-yyyy):</label>
+						<input class="form-control" id="fechaNacimiento" name="fechaNacimiento" th:value="${empleadoData.fechaNacimiento}" required th:field="*{fechaNacimiento}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="naf">naf (00/0000000/00):</label>
+						<input class="form-control" id="naf" name="naf" th:value="*{naf}" required th:field="${empleadoData.naf}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="iban">iban:</label>
+						<input class="form-control" id="iban" name="iban" th:value="*{iban}" required th:field="${empleadoData.iban}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="nivel">nivel:</label>
+						<input class="form-control" id="nivel" name="nivel" th:value="*{nivel}" required th:field="${empleadoData.nivel}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="usuario">usuario:</label>
+						<input class="form-control" id="usuario" name="usuario" th:value="*{usuario}" required th:field="${empleadoData.usuario}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="password">password:</label>
+						<input class="form-control" id="password" name="password" th:value="*{password}" required th:field="${empleadoData.password}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="valido">valido:</label>
+						<input class="form-control" id="valido" name="valido" th:value="*{valido}" required th:field="${empleadoData.valido}" type="text"/>
+					</div>
+					
+					<button class="btn btn-primary" type="submit">Modificar</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+
+</body>
+</html>

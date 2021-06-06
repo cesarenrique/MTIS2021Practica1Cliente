@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::head (titulo='Esto es una prueba')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+ 	<div class="container-fluid">
+ 
+ 			<div class="resultado">
+ 			   <table style="width:100%">
+ 			   	  <tr>
+ 			   	  	<th>Dato</th>
+ 			   	  	<th>Resultado</th>
+ 			   	  	
+ 			   	  </tr>
+ 			   	  <tr>
+				    <th>NIF</th>
+				    <td th:text="${empleado.getNIF()}"></td>
+				  </tr>
+			   	  <tr>
+				    <th>Nombre</th>
+				    <td th:text="${empleado.getNombre()}"></td>
+				  </tr>
+			   	  <tr>
+				    <th>Apellido</th>
+				    <td th:text="${empleado.getApellidos()}"></td>
+				  </tr>
+			   	  <tr>
+				    <th>Direccion</th>
+				    <td th:text="${empleado.getDireccion()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Poblacion</th>
+				    <td th:text="${empleado.getPoblacion()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Telefono</th>
+				    <td th:text="${empleado.getTelefono()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Email</th>
+				    <td th:text="${empleado.getEmail()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Fecha Nacimiento</th>
+				    <td th:text="${empleado.getFechaNacimiento()}"></td>
+				  </tr>
+				  <tr>
+				    <th>NAF</th>
+				    <td th:text="${empleado.getNaf()}"></td>
+				  </tr>
+				  <tr>
+				    <th>NAF</th>
+				    <td th:text="${empleado.getNaf()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Iban</th>
+				    <td th:text="${empleado.getIban()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Nivel</th>
+				    <td th:text="${empleado.getNivel()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Usuario</th>
+				    <td th:text="${empleado.getUsuario()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Valido</th>
+				    <td th:text="${empleado.getValido()}"></td>
+				  </tr>
+				  <tr>
+				    <th>Procesado</th>
+				    <td>
+				    	<div th:if="${hecho} ">procesado</div>
+				    	<div th:unless="${hecho}">No procesado</div>
+					</td>
+				  </tr>
+				  <tr>
+				    <th>Tipo</th>
+				    <td th:text="${tipo}"></td>
+				  </tr>
+		 		  <tr>
+				    <th>Error</th>
+				    <td th:text="${error}"></td>
+				  </tr>
+				</table>
+ 			</div>
+ 		
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+</body>
+</html>

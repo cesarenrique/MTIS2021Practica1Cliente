@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::head (titulo='Esto es una prueba')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+ 	<div class="container-fluid">
+ 
+ 			<div class="">
+ 			   <table style="width:100%">
+ 			   	  <tr>
+ 			   	  	
+ 			   	  	<th>NIF</th>
+ 			   	  	<th>Codigo Sala</th>
+ 			   	  	<th>Codigo Dispositovo</th>
+ 			   	  	<th>fecha Hora</th>
+ 			   	  	 			   	  	
+ 			   	  </tr>
+				  <tr th:each="entidad: ${entidades} ">
+				    <td th:text="${entidad.NIF}"></td>
+				    <td th:text="${entidad.codigoSala}"></td>
+				    <td th:text="${entidad.codigoDispositivo}"></td>
+				    <td th:text="${entidad.fechaHora}"></td>
+				  </tr>
+				</table>
+ 			</div>
+ 		
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+</body>
+</html>

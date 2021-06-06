@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments::head (titulo='Validar NAFSS')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4">
+				<form method="post" th:action="@{/validaciones/validarNAFSS}" th:object="${validarData}">
+					<div class="form-group">
+						<label for="dato">NAFSS A Valida (00/0000000/00)r</label>
+						<input class="form-control" id="dato" name="dato" required th:field="*{dato}" type="text"/>
+					</div>
+				
+					<button class="btn btn-primary" type="submit">validar NAFSS</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+
+</body>
+</html>

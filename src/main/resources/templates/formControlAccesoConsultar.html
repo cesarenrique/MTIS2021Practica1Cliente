@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments::head (titulo='Consultar Accesos')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4">
+				<form method="post" th:action="@{/controlacceso/consultar}" th:object="${entidadAccesoFechasData}">
+					<div class="form-group">
+						<label for="NIF">NIF del Empleado</label>
+						<input class="form-control" id="NIF" name="NIF" required th:field="*{NIF}" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="codigoSala">Codigo Sala</label>
+						<input class="form-control" id="codigoSala" name="codigoSala" required th:field="*{codigoSala}" type="text"/>
+					</div>
+				
+					<div class="form-group">
+						<label for="codigoDispositivo">Codigo dispositivo</label>
+						<input class="form-control" id="codigoDispositivo" name="codigoDispositivo" required th:field="*{codigoDispositivo}" type="text"/>
+					</div>
+					
+					<div class="form-group">
+						<label for="fechaDesde">Fecha desde</label>
+						<input class="form-control" id="fechaDesde" name="fechaDesde" required th:field="*{fechaDesde}" type="text"/>
+					</div>
+					
+					<div class="form-group">
+						<label for="fechaHasta">Fecha Hasta</label>
+						<input class="form-control" id="fechaHasta" name="fechaHasta" required th:field="*{fechaHasta}" type="text"/>
+					</div>
+				
+					<button class="btn btn-primary" type="submit">Consultar Accesos</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+
+</body>
+</html>

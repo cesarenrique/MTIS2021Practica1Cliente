@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::head (titulo='Esto es una prueba')"></head>
+<body>
+	<div th:replace="fragments::menu"></div>
+ 	<div class="container-fluid">
+ 
+ 			<div class="resultado">
+ 			   <table style="width:100%">
+ 			   	  <tr>
+ 			   	  	<th>Dato</th>
+ 			   	  	<th>Resultado</th>
+ 			   	  	
+ 			   	  </tr>
+				  <tr>
+				    <th>Procesado</th>
+				    <td>
+				    	<div th:if="${hecho} ">procesado</div>
+				    	<div th:unless="${hecho}">No procesado</div>
+					</td>
+				  </tr>
+				  <tr>
+				    <th>Tipo</th>
+				    <td th:text="${tipo}"></td>
+				  </tr>
+		 		  <tr>
+				    <th>Error</th>
+				    <td th:text="${error}"></td>
+				  </tr>
+				</table>
+ 			</div>
+ 		
+	</div>
+	<div th:replace="fragments::javascripts"></div>
+</body>
+</html>
